@@ -8,24 +8,41 @@ int main(int argc, char *argv[])
  
   simpleCharManager simplest_mem_manager;
   string sentence;
-  sentence = "Hello World!";
+  sentence = "Hello World!\n";
 
   /*write driver code as described in the assignment to replace this */
-  char* c1 = simplest_mem_manager.alloc_chars(sentence.size());
-  for(int i = 0; i < sentence.size(); i++)
+  char* c1 = simplest_mem_manager.alloc_chars(6);
+  for(int i = 0; i < 6; i++)
   {
   	c1[i] = sentence[i];
   }
   
-  char* c2 = simplest_mem_manager.alloc_chars(3);
-  for(int i =0; i < sentence.size(); i++)
+  char* c2 = simplest_mem_manager.alloc_chars(7);
+  for(int i = 6; i < 13; i++)
   {
-  	cout << c1[i]; 
+  	c2[i] = sentence[i];
   }
-  cout << "" << endl;
+  for(int i = 0;  i < 13; i++)
+  {
+  	if( i < 6)
+  	{
+  	cout << c1[i];
+  	}	
+  	else
+  	{
+  		cout << c2[i];
+  	}
 
-  simplest_mem_manager.free_chars(c1);
+  }
+  
+  string sentence2 = "moon! bye\n";
+  simplest_mem_manager.free_chars(c2);
+  char* c3 = simplest_mem_manager.alloc_chars(10);
+  for( int i = 6 ; i < 16; i++ )
+  {
+  	c3[i] = sentence2[i];
+  }
   
   return 0;
-}
+  	}
 
