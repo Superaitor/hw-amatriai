@@ -1,0 +1,20 @@
+Problem 1
+
+part(a)
+    Acceptable: 1, 4
+part(b)
+	Reccomended: 2, 3, 4, 5
+part(c)
+	True: 2
+part(d)
+	2, 4
+
+Problem 2
+	
+part(a)
+	accepted: 3
+part(b)
+	1- git add hw1q2b.cpp
+	2- git log
+part(c)
+	After prompting you for a message, it will commit those files
