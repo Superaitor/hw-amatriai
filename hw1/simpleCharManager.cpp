@@ -35,14 +35,11 @@ char* simpleCharManager::alloc_chars(int n)
 		return NULL;
 	}
 	
-	//free_place = (buffer + x);
+	
 	ch = (buffer+x);
 	free_place = (buffer+n);
 	
-	//for(int i = x; i < n+x; i++)
-	//{
-	//	array[i-x] = buffer[i];
-	//}
+	
 	return ch;
 
 }
@@ -63,5 +60,6 @@ void simpleCharManager::free_chars(char* p){
 	}
 
 }         
+
 
 
